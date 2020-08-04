@@ -1,0 +1,195 @@
+.movie {
+   width: 377px;
+   min-height: 30px;
+   background-color: rgb(225, 224, 249);
+   border-radius: 4px;
+   border: 1px solid rgb(220, 219, 244);
+   padding: 20px;
+   &__card {
+      background-color: #fff;
+      border-radius: 4px;
+      padding: 0;
+      min-height: 100px;
+      min-width: 100px;
+      box-shadow: -4px 2px 50px -19px rgba(20, 23, 28, 0.1), 0 3px 1px 0 rgba(20, 23, 28, 0.1);
+      display: flex;
+      position: relative;
+      &--img {
+         height: 100%;
+         border-radius: 4px 0px 0px 4px;
+         // height: 100px;
+         width: 100%;
+      }
+      &:not(:last-child) {
+         margin-bottom: 15px;
+      }
+      &__details {
+         padding: 12px 10px;
+         font-size: 20px;
+         font-weight: 500;
+         letter-spacing: 1.2px;
+         color: rgb(61, 41, 109);
+         &--title {
+            padding: 0px;
+            margin: 0px;
+            // line-height: 0px;
+         }
+
+         // line-height: 20px;
+         &--description {
+            text-align: justify;
+            font-size: 10px;
+            // color: #aaa;
+            // margin: 4px 0;
+            overflow: hidden;
+            color: rgba(61, 41, 109, 0.4);
+            // position: relative;
+            &--tooltips {
+               position: absolute;
+               left: 50%;
+               top: 60%;
+               border-radius: 4px;
+               min-height: 100px;
+               padding: 15px;
+               text-align: justify;
+               // height: 100px;
+               width: 377px;
+               z-index: 1;
+               background-color: #333;
+               color: #fff;
+               visibility: hidden;
+            }
+            &:hover {
+               cursor: pointer;
+            }
+            &:hover .movie__card__details--description--tooltips {
+               visibility: visible;
+            }
+         }
+         &--genre {
+            font-weight: 700;
+            text-align: justify;
+            font-size: 10px;
+            // color: #777;
+            color: rgba(61, 41, 109, 0.8);
+
+            margin: 3px 0;
+         }
+         &--language,
+         &--adult {
+            color: rgba(61, 41, 109, 0.5);
+
+            // color: #777;
+            font-size: 10px;
+         }
+      }
+      &--rating {
+         position: absolute;
+         right: 10px;
+         top: 10px;
+         font-size: 12px;
+         color: #aaa;
+         color: rgba(61, 41, 109, 0.9);
+
+         font-weight: 700;
+         // 61,41,109
+         // 56,35,104
+      }
+   }
+}
+.delete {
+   position: absolute;
+   top: 10px;
+   left: 10px;
+   background: #ff5c5c;
+   line-height: 11px;
+   font-size: 9px;
+   width: 15px;
+   height: 15px;
+   border: 1px solid #e33e41;
+   border-radius: 50%;
+   display: inline-block;
+   text-align: center;
+
+   &:hover {
+      cursor: pointer;
+   }
+   &:hover .closebutton {
+      visibility: visible;
+   }
+}
+.closebutton {
+   font-size: 12px;
+   color: #7777777e;
+   visibility: hidden;
+}
+
+// .movie {
+//    // margin-top: 20px;
+//    &__list {
+//       border: 1px solid #dcdadb;
+//       width: 366px;
+//       padding: 15px 20px;
+//       margin-bottom: 10px;
+//       display: flex;
+//       border-radius: 4px;
+//       // justify-content: space-between;
+//       &__details {
+//          height: 100%;
+//          width: 160px;
+//          display: flex;
+//          flex-direction: column;
+//          align-items: space-between;
+//          margin-right: 65px;
+//          // -right: 1px solid #dcdadb;
+//          &--name {
+//             width: 100%;
+//             border-bottom: 1px solid #dcdadb;
+//             font-size: 14px;
+//             font-weight: 500;
+//             margin-bottom: 5px;
+//          }
+//          &--release {
+//             font-size: 10px;
+//          }
+//          &--vote {
+//             font-size: 10px;
+//             color: #777;
+//          }
+//       }
+//    }
+// }
+.remove {
+   outline: none;
+   &:hover {
+      cursor: pointer;
+      font-weight: 900;
+   }
+}
+.search {
+   &__form {
+      position: relative;
+   }
+   &__dropdown {
+      z-index: 99;
+      position: absolute;
+      width: 365px;
+      background-color: white;
+      border: 1px solid #dcdadb;
+      min-height: 30px;
+      padding: 5px 10px;
+      &__list {
+         // margin-left: 2;
+         // border: 1px solid #dcdadb;
+         padding: 5px 10px;
+         border-radius: 3px;
+         display: flex;
+         &--img {
+            margin-right: 15px;
+            width: 55px;
+            height: 55px;
+            object-fit: cover;
+         }
+      }
+   }
+}
