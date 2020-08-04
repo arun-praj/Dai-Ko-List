@@ -4,11 +4,12 @@ import Login from "./components/Login";
 import "./App.css";
 
 function App() {
-   return (
-      <Switch>
+   return <h1>This is my fucking app</h1>;
+}
+{
+   /* <Switch>
          <Route path="/login" component={Login} />
-      </Switch>
-   );
+      </Switch> */
 }
 
 export default App;
