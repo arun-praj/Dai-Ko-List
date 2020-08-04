@@ -19,7 +19,6 @@ app.use(express.json());
 app.use("/", (req, res, next) => {
    res.json({
       "🖥 Server Status": "Running...",
-      AvailableRoutes: listEndpoints(app),
    }).status(200);
    next();
 });
