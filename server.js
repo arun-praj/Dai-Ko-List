@@ -22,7 +22,7 @@ if (process.env.NODE_ENV === "production") {
    });
 }
 
-//root route
+//root routed
 app.use("/", (req, res, next) => {
    res.json({
       "🖥 Server Status": "Running...",
